@@ -1,0 +1,21 @@
+body {
+    /*background-color: green;*/
+    background: url(../img/egg.jpg) no-repeat center fixed ;
+    background-size: cover;
+}
+
+.hero {
+    color: white;
+    margin-top: 20%;
+    text-align: center;
+    letter-spacing: -0.05em;
+    line-height: 1.2em;
+    font-family: "oswald", "sans-serif"
+    }
+
+.abc {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+
+    }

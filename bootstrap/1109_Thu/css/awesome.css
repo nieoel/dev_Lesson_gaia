@@ -1,0 +1,38 @@
+
+
+body {
+    background: url(../img/road.jpg) no-repeat center fixed;
+    -webkit-background-size: cover;
+       background-size: cover;
+
+       font-family: 'Indie Flower', cursive;
+}
+
+.white {
+    color: black;
+    background-color: green;
+
+    }
+
+.rowheight {
+    height: 300px;
+    }
+
+.res {
+    width: 300px;
+    height: 100px;
+
+    }
+
+  .te {
+
+    color: black;
+    background-color: red;
+
+    }
+
+   .footer {
+   background-color: #fff;
+   position: fixed;
+   bottom: 0px;
+   }
