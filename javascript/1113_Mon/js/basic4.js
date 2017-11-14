@@ -21,7 +21,7 @@ console.log(agejohn);
 
 var scope ="global scope" ;
     function checkscope(scope) {
-    // scope = scope;
+    var scope = scope;
     console.log(scope);
     scope = 'local scope' ;
 
