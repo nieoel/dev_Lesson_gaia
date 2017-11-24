@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>quiz74</title>
+    <script src="jquery-3.2.1.js"></script>
+    <script>
+     $(document).ready(function() {
+        $('div div').each(function(index){
+         var $el = $(this);
+         console.log(this)
+         $el.html('<h1>hello world '+ index +'</h1>');
+        });
+     });
+    </script>
+</head>
+<body>
+    <div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div></div>
+</body>
+</html>

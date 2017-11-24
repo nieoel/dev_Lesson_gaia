@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>quiz81</title>
+    <style>
+        div{
+            width:20px;
+            height:20px;
+            border:1px solid black;
+        }
+        .select0{
+            background: pink;
+        }
+        .select1{
+            background: black;
+        }
+        .select2{
+            background: yellow;
+        }
+    </style>
+    <script src="jquery-3.2.1.js"></script>
+    <script>
+    $(document).ready(function() {
+        var $el = $('div');
+        var len = $('div').length;
+        for (var i=0; i < len; i++){
+            if (i % 3 === 0){
+            $('div').eq(i).addClass('select0')
+            } else if (i % 3 === 1) {
+            $('div').eq(i).addClass('select1')
+            } else{
+            $('div').eq(i).addClass('select2')
+            }
+        }
+    });
+    </script>
+</head>
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>quiz78</title>
+    <script src="jquery-3.2.1.js"></script>
+    <script>
+     $(document).ready(function() {
+        $('img').each(function(index){
+        var $image = $(this);
+        var source = ['./img/boating.jpg', './img/morning.jpg'];
+        $image.attr('src',source[index]);
+        });
+     });
+    </script>
+</head>
+<body>
+    <ul>
+        <li><img></li>
+        <li><img></li>
+    </ul>
+</body>
+</html>
