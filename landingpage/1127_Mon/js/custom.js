@@ -37,11 +37,62 @@ $('.gallery').each(function(){
 
 
 /**********************************************
-                magnific popup
+                team
     http://dimsemenov.com/plugins/magnific-popup/documentation.html#initializing-popup
 *********************************************/
 
+
+
 $(function(){
-  $(".owl-carousel").owlCarousel();
-  items : 3;
+  $("#team-members").owlCarousel({
+  items : 3,
+  autoplay : true,
+  smartSpeed : 400,
+  loop : true,
+  autoplayHoverPause : true
+});
+});
+
+/**********************************************
+              testimonial
+
+*********************************************/
+
+$(function(){
+  $("#customers-testimonials").owlCarousel({
+  items : 1,
+  autoplay : true,
+  smartSpeed : 400,
+  loop : true,
+  autoplayHoverPause : true
+});
+});
+
+
+/**********************************************
+          counterup
+      https://github.com/ciromattia/jquery.counterup
+*********************************************/
+
+$(function(){
+ $('.counter').counterUp({
+    delay: 10,
+    time: 2000,
+    });
+});
+
+
+/**********************************************
+          counterup
+      https://github.com/ciromattia/jquery.counterup
+*********************************************/
+
+$(function(){
+  $("#clients-list").owlCarousel({
+  items : 3,
+  autoplay : true,
+  smartSpeed : 400,
+  loop : true,
+  autoplayHoverPause : true
+});
 });
