@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>quiz100</title>
+    <style>
+        .menu li{
+            border:1px solid black;
+        }
+    </style>
+    <script src="jquery-3.2.1.js"></script>
+    <script>
+    $(document).ready(function() {
+        $('li').click(function(event){
+            $('li:eq(1), li:eq(2)').css('background','pink')
+            })  ;
+    });
+
+
+    </script>
+</head>
+<body>
+    <ul class="menu">
+        <li>menu1</li>
+        <li>menu2</li>
+        <li>menu3</li>
+        <li>menu4</li>
+        <li>menu5</li>
+        <li>menu6</li>
+    </ul>
+</body>
+</html>

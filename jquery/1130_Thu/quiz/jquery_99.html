@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>quiz99</title>
+    <style>
+        .menu li{
+            border:1px solid black;
+        }
+    </style>
+    <script src="jquery-3.2.1.js"></script>
+    <script>
+    $(document).ready(function() {
+        var len = $('ul li').length;
+        var $el = $('<ul></ul>');
+        $el.addClass('menu');
+
+        for (var i=1; i < len+1; i++){
+               $el.append($('<li>menu' + i + '</li>'));
+
+        }
+             $('body').append($el);
+    });
+    </script>
+</head>
+<body>
+    <ul class="menu">
+        <li>menu1</li>
+        <li>menu2</li>
+        <li>menu3</li>
+        <li>menu4</li>
+        <li>menu5</li>
+        <li>menu6</li>
+    </ul>
+</body>
+</html>

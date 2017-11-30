@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>quiz94</title>
+    <style>
+        .menu li{
+            border:1px solid black;
+        }
+    </style>
+    <script src="jquery-3.2.1.js"></script>
+    <script>
+
+
+    $(document).ready(function() {
+
+        for(var i=1; i < 4; i++){
+            var $il = $('<li>item' + i + '</li>');
+            $il.addClass('select' +i);
+            $('.select' + (i-1)).before($il);
+        }
+    });
+    </script>
+</head>
+<body>
+    <ul class="menu">
+        <li>hello world</li>
+        <li>hello world</li>
+        <li class="select0">hello world</li>
+        <li>hello world</li>
+        <li>hello world</li>
+        <li>hello world</li>
+    </ul>
+</body>
+</html>

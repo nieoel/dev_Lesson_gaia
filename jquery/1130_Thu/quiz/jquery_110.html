@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>quiz110</title>
+    <style>
+        div ul li{
+            border:1px solid red;
+        }
+        nav ul{
+            list-style-type: none;
+            overflow: hidden;
+        }
+        nav ul li{
+
+            margin-right: 20px;
+        }
+
+    </style>
+    <script src="jquery-3.2.1.js"></script>
+    <script>
+
+    $(document).ready(function() {
+
+        var color = ['pink', 'blue'];
+
+        $('#add').click(function (event) {
+
+        });
+
+    });
+    </script>
+</head>
+<body>
+<nav>
+    <ul>
+        <li><p id="add">추가</p></li>
+        <li><p id="remove">삭제</p></li>
+        <li><p id="change">변경</p></li>
+    </ul>
+</nav>
+<div>
+    <ul>
+        <li>menu1</li>
+        <li>menu2</li>
+        <li>menu3</li>
+        <li>menu4</li>
+        <li>menu5</li>
+    </ul>
+</div>
+</body>
+</html>

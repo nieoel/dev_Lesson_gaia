@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>quiz89</title>
+    <style>
+        .select{
+            background: pink;
+            color:white;
+            font-size: 20px;
+        }
+    </style>
+    <script src="jquery-3.2.1.js"></script>
+    <script>
+    $(document).ready(function() {
+        var cls = $('ul').attr('class');
+        console.log(cls);
+        $('ul').addClass(cls);
+
+    });
+    </script>
+</head>
+<body>
+    <ul class="select">
+        <li>hello world</li>
+        <li>hello world</li>
+    </ul>
+    <ul>
+        <li>hello world</li>
+        <li>hello world</li>
+    </ul>
+</body>
+</html>
