@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+          <title>title</title>
+<link rel="stylesheet" href="./css/index.css">
+
+
+</head>
+<script>
+    $(‘ul li’).mouseenter(function(event){
+$(this).css(‘color’,’red’);
+});
+$(‘ul’).click(function(event){
+$(this).append($(’<li>추가된 리스트</li>');
+});
+
+</script>
+<body>
+    <div id="basket">basket</div>
+    <div id="apple">apple</div>
+    <div id="banana">banana</div>
+    <div id="orange">orange</div>
+</body>
+
+<script src="./js/jquery-3.2.1js"></script>
+
+
+</script>
+
+</html>
