@@ -12,7 +12,10 @@
     <script src="jquery-3.2.1.js"></script>
     <script>
     $(document).ready(function() {
-            $('label').focus(function(event){
+            $('input').focus(function(event){
+                $(this).addClass('focus');
+            });
+            $('textarea').focus(function(event){
                 $(this).addClass('focus');
             });
     });

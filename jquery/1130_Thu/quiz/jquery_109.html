@@ -14,6 +14,13 @@
 
     $(document).ready(function() {
 
+            var foc= 0;
+           $('textarea').focus(function(event) {
+            if(foc ==0) {
+                $(this).val('');
+            }
+            foc++;
+        });
     });
     </script>
 </head>

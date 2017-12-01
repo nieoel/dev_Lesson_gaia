@@ -20,10 +20,23 @@
     <script src="jquery-3.2.1.js"></script>
     <script>
     $(document).ready(function() {
-        function store_state(){
-
-
+        function store_state(event){
+            $('section').html($('<p>발생한 이벤트 : '+event.type+'</p>' + '<p>이벤트 주제 : ' +$(event.target).text()+'</p>'));
+                
+           }
+    $('div').click(function(event) {
+        store_state(event);
     });
+
+    $('div').mouseenter(function(event) {
+        store_state(event);
+    });
+
+    $('div').mouseleave(function(event) {
+        store_state(event);
+    });
+
+});
     </script>
 </head>
 <body>

@@ -10,10 +10,12 @@
         nav ul{
             list-style-type: none;
             overflow: hidden;
+            display : block;
         }
         nav ul li{
-
+            float : left;
             margin-right: 20px;
+            overflow : hidden;
         }
 
     </style>
@@ -24,11 +26,29 @@
 
         var color = ['pink', 'blue'];
 
-        $('#add').click(function (event) {
 
+        $('#add').click(function (event) {
+            var ind = $('div ul').children('li:last').index();
+            $('ul:last').append($('<li>'+'menu'+(ind+2)+'</li>'));
+                console.log(ind)
         });
 
+
+         $('#remove').click(function (event) {
+               $('div ul li:last').remove();
+        });
+
+        var cli = 0
+        $('#change').click(function(event) {
+            if(cli % 2 == 0) {
+                $('div ul').css('background', color[0]);
+            } else if (cli % 2 ==1 ) {
+                 $('div ul').css('background', color[1]);
+            }
+            cli++;
+        });
     });
+
     </script>
 </head>
 <body>

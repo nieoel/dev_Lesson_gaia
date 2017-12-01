@@ -13,6 +13,14 @@
     <script>
 
     $(document).ready(function() {
+          $('#name').focus(function(event){
+                $(this).addClass('focus');
+          $('input:first').after($('<span>영문으로 작성하세요</span>')) ;
+                $('#name').blur(function(event){
+                        $(this).removeClass('focus');
+                        $('span').remove('');
+                    });
+            });
 
     });
     </script>

@@ -14,6 +14,14 @@
 
     $(document).ready(function() {
 
+
+             $('#password').blur(function(event){
+                var len = $(this).val().length;
+                console.log(len);
+                 if(len < 4) {
+                $('input:eq(2)').after($('<span>비밀번호를 4자이상 입력하세요.</span>')) ;
+                }
+             });
     });
     </script>
 </head>
