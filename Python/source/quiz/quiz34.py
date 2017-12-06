@@ -1,3 +1,8 @@
 tu = (1,2)
-tu_list
-print(tu)
+d=list(tu)
+d.append(3)
+
+tu_list=tuple(d)
+
+
+print(tu_list)

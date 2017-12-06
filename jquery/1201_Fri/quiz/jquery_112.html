@@ -14,8 +14,17 @@
     </style>
     <script src="jquery-3.2.1.js"></script>
     <script>
+        var len$;
+
     $(document).ready(function() {
 
+
+        $('ul').on('click', 'li', function(event){
+        var len = $(this).index();
+            for (var i=0; i<=len ; i++) {
+            $('li:last').append($('<li>추가된아이템'+'</li>'))
+           }
+         });
     });
     </script>
 </head>

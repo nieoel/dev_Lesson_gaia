@@ -17,6 +17,31 @@
     <script>
     $(document).ready(function() {
 
+
+        $('#right').click(function(event){
+            var el = $('nav div').index();
+            var move = $('#move').index();
+            if (el !==3){
+            $('div:eq(3)').insertBefore($('#move'));
+            };
+            if(move ==3){
+               alert('다왔음')
+            }
+
+        });
+
+         $('#left').click(function(event){
+            var el = $('nav div').index();
+            var move = $('#move').index();
+            if (el ==0){
+            $('div:eq(0)').insertAfter($('#move'));
+            }
+            if(move ==0){
+               alert('다왔음');
+            }
+
+        });
+
     });
     </script>
 </head>

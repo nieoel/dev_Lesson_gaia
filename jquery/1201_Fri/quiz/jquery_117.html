@@ -9,7 +9,10 @@
     <script src="jquery-3.2.1.js"></script>
     <script>
     $(document).ready(function() {
-
+        $('li').on('click',function(e){
+        e.preventDefault();
+        $(this).css('background', 'pink');
+        });
     });
     </script>
 </head>

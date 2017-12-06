@@ -16,7 +16,20 @@
     <script src="jquery-3.2.1.js"></script>
     <script>
     $(document).ready(function() {
+        var ind;
+        console.log(ind)
+          $('#add').on('click', function(e){
+             var ind = $('div').length;
+           $('nav:last').append($('<div>'+(ind)+'</div>'));
+        });
+           $('#del').on('click', function(e){
+           $('div:first').remove();
+        });
 
+          $('#remove').on('click', function(e){
+           $('#add').off('click');
+           $('#del').off('click');
+        });
     });
     </script>
 </head>

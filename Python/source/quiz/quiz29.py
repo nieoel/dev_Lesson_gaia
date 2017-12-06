@@ -1,4 +1,8 @@
 list = ['apple', 'pineapple', 'rice', 'noodel']
-index = input('삭제하기를 원하는 번호를 입력하세요: ')
+
+
+index = input('삭제하기를 원하는 번호를 입력하세요: ' )
+index=int(index)
+el=list.pop(index)
 
 print('삭제된 요소: ', el, '전체리스트: ', list)

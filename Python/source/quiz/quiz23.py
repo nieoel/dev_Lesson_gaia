@@ -1,2 +1,2 @@
 list = ['park', 'kim', 'lee']
-print(list)
+print(list[2])

@@ -3,29 +3,33 @@
 <head>
     <meta charset="UTF-8">
           <title>title</title>
-<link rel="stylesheet" href="./css/index.css">
+<script src="jquery-3.2.1.js"></script>
 
 
 </head>
 <script>
-    $(‘ul li’).mouseenter(function(event){
-$(this).css(‘color’,’red’);
-});
-$(‘ul’).click(function(event){
-$(this).append($(’<li>추가된 리스트</li>');
-});
-
+    $(document).ready(function(){
+        $('ul').click(function (e) {
+            var event = jQuery.Event("style-change");
+            event.bgcolor="#090909";
+            event.color = "white";
+            event.font-size = 20;
+            $(this).children('li').eq(0).trigger(event);
+        });
+        $('ul li').on('style-change', function (e){
+        $(this).css('background', e.bgcolor);
+        $(this).css('color', e.color);
+        $(this).css('font-size', e.font-size);
+        });
+    });
 </script>
+</head>
 <body>
-    <div id="basket">basket</div>
-    <div id="apple">apple</div>
-    <div id="banana">banana</div>
-    <div id="orange">orange</div>
+    <ul>
+        <li>hello world</li>
+        <li>hello world</li>
+        <li>hello world</li>
+        <li>hello world</li>
+    </ul>
 </body>
-
-<script src="./js/jquery-3.2.1js"></script>
-
-
-</script>
-
 </html>

@@ -7,6 +7,15 @@
 
 
 </head>
+<script>
+    $(‘ul li’).mouseenter(function(event){
+$(this).css(‘color’,’red’);
+});
+$(‘ul’).click(function(event){
+$(this).append($(’<li>추가된 리스트</li>');
+});
+
+</script>
 <body>
     <div id="basket">basket</div>
     <div id="apple">apple</div>
@@ -14,8 +23,8 @@
     <div id="orange">orange</div>
 </body>
 
-<script src="./js/jquery-3.2.1.min.js"></script>
-<script src="./js/script.js"></script>
+<script src="./js/jquery-3.2.1js"></script>
+
 
 </script>
 

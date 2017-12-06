@@ -16,13 +16,25 @@
     <script>
     var event_list = ['click', 'mouseenter', 'mouseleave', 'dblclick'];
     var property_lists = [{
-        background : 'green',
+        background : 'green' ,
         border : '1px solid red'
-    },
-
-    ];
+    },{
+        background : 'red' ,
+        border : '1px solid red'
+    }, {
+        background : 'yellow',
+        border : '1px solid red'
+    },{
+        background : 'blue',
+        border : '1px solid red'
+    }]
     $(document).ready(function() {
+           $('nav div').each(function(index){
+            $(this).on(event_list[index], function(event) {
+                $(this).css(property_lists[index]);
 
+            });
+        });
     });
     </script>
 </head>

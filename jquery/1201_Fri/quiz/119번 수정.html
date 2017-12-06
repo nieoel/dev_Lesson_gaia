@@ -19,25 +19,20 @@
 
         $('#add').click(function(event){
             if(!$('li').hasClass('background')){
-               alert('선택되지 않았습니다.');
-            }
+              alert('선택되지 않았습니다.');
+            } else if($('li').hasClass('background')){
+              $('<li>추가된아이템'+'</li>').insertAfter('.background');
+              $('li').removeClass('background')
+           }
         });
 
          $('#del').click(function(event){
             if(!$('li').hasClass('background')){
-               alert('선택되지 않았습니다.');
+             alert('선택되지 않았습니다.');
+            } else if($('li').hasClass('background')){
+             $('.background').remove();
             }
         });
-
-        $('#add').click(function(event){
-               $('<li>추가된아이템'+'</li>').insertAfter('.background');
-               $('li').removeClass('background')
-        });
-
-        $('#del').click(function(event){
-            $('.background').remove();
-        });
-
 
     });
 

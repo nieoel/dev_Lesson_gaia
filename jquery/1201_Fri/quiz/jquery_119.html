@@ -3,9 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <title>quiz119</title>
+    <style>
+        .background {
+            background : pink;
+            }
 
+    </style>
     <script src="jquery-3.2.1.js"></script>
     <script>
+    $(document).ready(function() {
+        $('ul').on('click', 'li', function(e){
+        $(this).addClass('background');
+           event.stopPropagation();
+        });
+
+        $('#add').click(function(event){
+            if(!$('li').hasClass('background')){
+               alert('선택되지 않았습니다.');
+            }
+        });
+
+         $('#del').click(function(event){
+            if(!$('li').hasClass('background')){
+               alert('선택되지 않았습니다.');
+            }
+        });
+
+        $('#add').click(function(event){
+               $('<li>추가된아이템'+'</li>').insertAfter('.background');
+               $('li').removeClass('background')
+        });
+
+        $('#del').click(function(event){
+            $('.background').remove();
+        });
+
+
+    });
+
 
     </script>
 </head>

@@ -4,32 +4,29 @@
     <meta charset="UTF-8">
           <title>title</title>
 <script src="jquery-3.2.1.js"></script>
-
-
 </head>
+<style>
+    div {
+        border : 1px solid black;
+        padding : 10px;
+        }
+</style>
 <script>
     $(document).ready(function(){
-        $('ul').click(function (e) {
-            var event = jQuery.Event("style-change");
-            event.bgcolor="#090909";
-            event.color = "white";
-            event.fontsize = "20px";
-            $(this).children('li').eq(0).trigger(event);
-        });
-        $('ul li').on('style-change', function (e){
-        $(this).css('background', e.bgcolor);
-        $(this).css('color', e.color);
-        $(this).css('font-size', e.fontsize);
+        $('div').click(function(event){
+            $(this).css('background', 'pink');
+            event.stopPropagation();
         });
     });
 </script>
 </head>
 <body>
-    <ul>
-        <li>hello world</li>
-        <li>hello world</li>
-        <li>hello world</li>
-        <li>hello world</li>
-    </ul>
+    <div id="one">1
+        <div id="two">2
+            <div id="three">3
+                <div id="four">4</div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

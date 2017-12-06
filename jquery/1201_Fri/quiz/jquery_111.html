@@ -15,10 +15,12 @@
     <script src="jquery-3.2.1.js"></script>
     <script>
     var event_list = ['click', 'mouseenter', 'mouseleave', 'dblclick'];
-    var color = ;
+    var color = ['pink', 'yellow', 'orange', 'green'];
     $(document).ready(function() {
         $('nav div').each(function(index){
-
+            $(this).on(event_list[index], function(event) {
+                $(this).css('background', color[index]);
+            });
         });
     });
     </script>

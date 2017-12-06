@@ -1,2 +1,2 @@
-
-print(list)
+a = ['park', 'kim', 'lee']
+print(a)

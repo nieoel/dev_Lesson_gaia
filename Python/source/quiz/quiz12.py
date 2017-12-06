@@ -1,6 +1,6 @@
 txt = 'programing is poet'
 
-print();
-print();
-print();
-print();
+print(txt[0:3]);
+print(txt[5:9]);
+print(txt[11:13]);
+print(txt[14:]);

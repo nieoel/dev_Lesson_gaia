@@ -2,6 +2,6 @@ txt = 'programing is poet';
 txt1 = 'is';
 
 
-print('poet' in );
-print('programmer'  txt);
-print(txt1);
+print('poet' in txt);
+print(not'programmer' in txt);
+print(txt1 in 'is');
