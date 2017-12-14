@@ -32,6 +32,26 @@
     <script>
 
     $(document).ready(function() {
+        var balloon = $('<div class="balloon"></div>').appendTo('body');
+
+
+
+        $('.showBalloon').mouseenter(function(event){
+            var text = $(this).attr('title')
+            balloon.text(text);
+            balloon.show();
+            console.log(event.pageX);
+            balloon.css({'left' : event.pageX+5 , 'top' : event.pageY });
+
+        });
+
+         $('.showBalloon').mousemove(function(event){
+            balloon.css({'left' : event.pageX+5 , 'top' : event.pageY });
+          });
+
+         $('.showBalloon').mouseleave(function(event){
+            balloon.hide();
+        });
 
     });
 

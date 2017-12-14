@@ -2,112 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>tab menu and panel</title>
+    <title>fixed header</title>
     <style>
-        .tab-menu{
-            list-style: none;
-            height: 80px;
+        
+        .header-content{
+
+            background: lightseagreen;
+        }
+        ul{
+            background-color: black;
+            color:white;
             overflow: hidden;
+            list-style: none;
         }
-
-
-        .tab-menu li{
-            width:100px;
-            height:40px;
-            border: 1px solid black;
-            float:left;
-            margin-right: 20px;
-            text-align: center;
-            display:inline-block;
-            line-height: 35px;
-        }
-
-
-        .hover{
-            background-color:pink;
-        }
-
-
-        .select{
-            background-color: lightseagreen;
-            color: white;
-        }
-
-
-        .tab-contents{
-            padding-left: 40px;
-            padding-right: 40px;
-            width: 700px;
-        }
-        .tab-contents .content{
-            border: 1px solid lightcoral;
-            padding: 5px 20px;
-            display: none;
+        ul li{
+            float: left;
+            margin:10px;
         }
     </style>
-    <script src="./js/jquery-3.2.1.js"></script>
+    <script src="jquery-3.2.1.js"></script>
     <script>
-   var select_index = 0;
-    $(document).ready(function() {
-        setSelect(select_index);
-        $('ul li').hover(function(e){
-            setHover($(this), 1);
-        }, function(e){
-            setHover($(this), 0);
-        })
-        $('ul li').click(function (e) {
-            setSelect($(this).index());
-        })
-    });
-
-    function setSelect(index){
-        $('ul li').eq(index).addClass('select');
-        $('.content').eq(index).addClass('select').show();
-
-        if(index != select_index) {
-            $('ul li').eq(select_index).removeClass('select');
-            $('.content').eq(select_index).hide();
-            select_index = index;
-        }
-    }
-
-    function setHover(el, add){
-        if(add==1){
-            var el_index = el.index();
-            if(select_index == el_index){
-                el.removeClass('select');
-            }
-            el.addClass('hover');
-            el.animate({
-                height:'75px',
-                'line-height': '60px'
-            });
-        }else {
-            el.removeClass('hover');
-            el.animate({
-                 height:'40px',
-                 'line-height':'35px'
-            });
-            if(select_index == el.index()){
-                el.addClass('select');
-            }
-        }
-    }
-
-
 
     </script>
 </head>
 <body>
-<ul class="tab-menu" id="tabMenu1">
-    <li class="menuitem1">google</li>
-    <li class="menuitem2">facebook</li>
-    <li class="menuitem3">pinterest</li>
-    <li class="menuitem4">twitter</li>
-    <li class="menuitem5">path</li>
-</ul>
-<div class="tab-contents">
-    <div class="content">
+<div class="content">
+    <div class="header-content">
         <h1>Google</h1>
         <p>
             때에, 곳이 방황하였으며, 사랑의 너의 것이다.보라, 것이다.
@@ -123,9 +43,15 @@
             사라지지 능히 살 청춘의 부패를 가지에 봄바람을 가슴이 그리하였는가?
         </p>
     </div>
-     <div class="content">
+    <ul>
+        <li>menu1</li>
+        <li>menu1</li>
+        <li>menu1</li>
+        <li>menu1</li>
+    </ul>
+    <div class="header-content">
         <h1>Facebook</h1>
-         <p>
+        <p>
             때에, 곳이 방황하였으며, 사랑의 너의 것이다.보라, 것이다.
             영원히 못할 것은 청춘 것은 그림자는 사막이다.
             청춘을 대중을 그들에게 들어 트고,
@@ -139,9 +65,9 @@
             사라지지 능히 살 청춘의 부패를 가지에 봄바람을 가슴이 그리하였는가?
         </p>
     </div>
-     <div class="content">
-        <h1>Pinterest</h1>
-         <p>
+    <div class="header-content">
+        <h1>Twitter</h1>
+        <p>
             때에, 곳이 방황하였으며, 사랑의 너의 것이다.보라, 것이다.
             영원히 못할 것은 청춘 것은 그림자는 사막이다.
             청춘을 대중을 그들에게 들어 트고,
@@ -155,25 +81,9 @@
             사라지지 능히 살 청춘의 부패를 가지에 봄바람을 가슴이 그리하였는가?
         </p>
     </div>
-     <div class="content">
-        <h1>twitter</h1>
-         <p>
-            때에, 곳이 방황하였으며, 사랑의 너의 것이다.보라, 것이다.
-            영원히 못할 것은 청춘 것은 그림자는 사막이다.
-            청춘을 대중을 그들에게 들어 트고,
-            실로 예가 날카로우나 그들을 봄바람이다.
-            가치를 것이 발휘하기 아니한 생의 인류의 이상은 청춘 철환하였는가?
-            그것은 청춘의 살았으며, 주는 간에 석가는 기쁘며,
-            청춘에서만 속에 것이다. 어디 없으면, 크고 눈에 얼마나 맺어, 끓는다.
-            역사를 같으며, 튼튼하며, 평화스러운 길지 위하여 청춘의 끝까지 때문이다.
-            피가 같은 듣기만 작고 살 이것은 얼마나 이것이다.
-            노래하며 이상의 창공에 끓는 용기가 안고, 두기 칼이다.
-            사라지지 능히 살 청춘의 부패를 가지에 봄바람을 가슴이 그리하였는가?
-        </p>
-    </div>
-     <div class="content">
-        <h1>path</h1>
-         <p>
+    <div class="header-content">
+        <h1>Cyworld</h1>
+        <p>
             때에, 곳이 방황하였으며, 사랑의 너의 것이다.보라, 것이다.
             영원히 못할 것은 청춘 것은 그림자는 사막이다.
             청춘을 대중을 그들에게 들어 트고,
@@ -188,5 +98,6 @@
         </p>
     </div>
 </div>
+
 </body>
 </html>

@@ -39,11 +39,29 @@
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script>
     <script>
-         $(document).ready(function() {
-            $('.header-content').on('click', function(event){
-                $(this).addClass('select');
-            });
-         });
+        var selected_index = -1;
+    $(document).ready(function() {
+        $('.header-content').on('click', function (e) {
+            var index = $(this).index();
+            $(this).addClass('select');
+            if (selected_index == -1){
+
+                $('.content').eq(index / 2).show();
+                selected_index = index;
+            }
+            else if (selected_index != index) {
+                $('.content').eq(selected_index/2).hide();
+                $('.header-content').eq(selected_index/2).removeClass('select');
+                $('.content').eq(index / 2).show();
+                selected_index = index;
+            }else{
+                 $('.content').eq(selected_index/2).hide();
+                 $('.header-content').eq(selected_index/2).removeClass('select');
+                 selected_index = -1;
+            }
+        })
+    });
+
     </script>
 </head>
 <body>
